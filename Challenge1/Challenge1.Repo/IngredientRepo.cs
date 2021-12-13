@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Challenge1.Repo
 {
-    public class Ingredients
+    public class IngredientRepo
     {
-        public string Name { get; set; }
-        public int MealNumber { get; set; }
+        public List<Ingredients> _ingredients = new List<Ingredients>();
     }
 }

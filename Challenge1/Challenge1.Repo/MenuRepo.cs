@@ -29,16 +29,15 @@ namespace Challenge1.Repo
             return _menuItemRepo;
         }
 
-        public bool DeleteMenuItem(int mealNumber)
+        public bool DeleteMenuItem(Menu item)
         {
-            Menu menuItemToBeDeleted = GetMenuItemByMealNumber(mealNumber);
-            if (menuItemToBeDeleted == null)
+            if (item == null)
             {
                 return false;
             }
             else
             {
-                _menuItemRepo.Remove(menuItemToBeDeleted);
+                _menuItemRepo.Remove(item);
                 return true;
             }
         }
