@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Challenge1.Repo
 {
-    public class Class1
+    public class Ingredients
     {
+        public string Name { get; set; }
     }
 }
