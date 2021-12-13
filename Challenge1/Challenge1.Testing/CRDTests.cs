@@ -12,7 +12,7 @@ namespace Challenge1.Testing
 
         private static MenuRepo _menuRepo = new MenuRepo();
 
-        public List<Menu> _menuItems;
+        public List<Menu> _menuItemsTest = new List<Menu>();
 
         [TestInitialize]
         public void MyStockItem()
@@ -32,16 +32,32 @@ namespace Challenge1.Testing
         }
 
         [TestMethod]
+        public List<Menu> ReturnMenuItemsTest()
+        {
+            return _menuItemsTest;
+        }
+
+        [TestMethod]
         public void TestReturnMenuItems()
         {
-            MyStockItem();
-            List<Menu> listOfAllMenuItems = _menuRepo.ReturnMenuItems();
+            Menu item = new Menu(1, "GoodStuff", "It's real good", 12.59m);
+            _menuRepo.AddMenuItem(item);
+            List<Menu> expectedListOfAllMenuItems = _menuRepo.ReturnMenuItems();
+
+            _menuItemsTest.Add(item);
+            List<Menu> actualListOfAllMenuItems = ReturnMenuItemsTest();
+
+            Assert.ReferenceEquals(expectedListOfAllMenuItems, actualListOfAllMenuItems);
+
         }
+
 
         [TestMethod]
         public void TestDeleteMenuItem()
         {
             Menu item = new Menu(1, "GoodStuff", "It's real good", 12.59m);
+            _menuRepo.AddMenuItem(item);
+
             bool expected = true;
 
             bool actual = _menuRepo.DeleteMenuItem(item);
@@ -55,6 +71,8 @@ namespace Challenge1.Testing
             Menu expected = new Menu(1, "GoodStuff", "It's real good", 12.59m);
             _menuRepo.AddMenuItem(expected);
             Menu actual = _menuRepo.GetMenuItemByMealNumber(1);
+
+            Assert.ReferenceEquals(expected, actual);
         }
     }
 }
