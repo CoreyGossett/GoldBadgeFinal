@@ -48,7 +48,6 @@ namespace Challenge1.Testing
             List<Menu> actualListOfAllMenuItems = ReturnMenuItemsTest();
 
             Assert.ReferenceEquals(expectedListOfAllMenuItems, actualListOfAllMenuItems);
-
         }
 
 
