@@ -40,5 +40,9 @@ namespace Challenge1.Repo
             MealNumber = mealNumber;
         }
 
+        public Menu()
+        {
+
+        }
     }
 }
