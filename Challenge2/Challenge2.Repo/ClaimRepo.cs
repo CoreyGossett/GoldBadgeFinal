@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Challenge2.Repo
 {
-    class ClaimRepo
+    public class ClaimRepo
     {
         public Queue<Claim> _claimQueue = new Queue<Claim>();
 
+        
+        public Claim _claim = new Claim();
         public bool CreateClaim(Claim claim)
         {
             if (claim is null)
@@ -25,10 +27,10 @@ namespace Challenge2.Repo
             return _claimQueue;
         }
 
-        public bool GetNextClaim()
+        public Claim DequeueClaim()
         {
-            _claimQueue.Dequeue();
-            return true;
+            Claim nextClaim = _claimQueue.Dequeue();
+            return nextClaim;
         }
     }
 }

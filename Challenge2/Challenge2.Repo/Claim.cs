@@ -25,6 +25,16 @@ namespace Challenge2.Repo
         {
 
         }
+
+        public Claim(int id, ClaimType claimType, string description, decimal claimAmount, DateTime dateOfIncident, DateTime dateOfClaim)
+        {
+            ClaimId = id;
+            TypeOfClaim = claimType;
+            Description = description;
+            ClaimAmount = claimAmount;
+            DateOfIncident = dateOfIncident;
+            DateOfClaim = dateOfClaim;
+        }
         
     }
 }

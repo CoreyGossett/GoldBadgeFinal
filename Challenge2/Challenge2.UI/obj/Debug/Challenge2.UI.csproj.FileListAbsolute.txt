@@ -1,0 +1,10 @@
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\bin\Debug\Challenge2.UI.exe.config
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\bin\Debug\Challenge2.UI.exe
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\bin\Debug\Challenge2.UI.pdb
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\bin\Debug\Challenge2.Repo.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\bin\Debug\Challenge2.Repo.pdb
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\obj\Debug\Challenge2.UI.csproj.AssemblyReference.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\obj\Debug\Challenge2.UI.csproj.CoreCompileInputs.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\obj\Debug\Challenge2.UI.csproj.CopyComplete
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\obj\Debug\Challenge2.UI.exe
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.UI\obj\Debug\Challenge2.UI.pdb
