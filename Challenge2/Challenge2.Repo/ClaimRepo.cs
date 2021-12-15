@@ -27,10 +27,16 @@ namespace Challenge2.Repo
             return _claimQueue;
         }
 
-        public Claim DequeueClaim()
+        //public bool DequeueClaim(Claim claim)
+        //{
+        //     _claimQueue.Dequeue(claim);
+        //    return true;
+        //}
+
+        public bool DequeueClaim()
         {
-            Claim nextClaim = _claimQueue.Dequeue();
-            return nextClaim;
+            _claimQueue.Dequeue();
+            return true;
         }
     }
 }

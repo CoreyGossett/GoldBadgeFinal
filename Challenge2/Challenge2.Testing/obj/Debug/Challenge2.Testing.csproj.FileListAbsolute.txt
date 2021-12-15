@@ -1,0 +1,16 @@
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Challenge2.Testing.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Challenge2.Testing.pdb
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Challenge2.Repo.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Challenge2.Repo.pdb
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\obj\Debug\Challenge2.Testing.csproj.AssemblyReference.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\obj\Debug\Challenge2.Testing.csproj.CoreCompileInputs.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\obj\Debug\Challenge2.Testing.csproj.CopyComplete
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\obj\Debug\Challenge2.Testing.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge2\Challenge2.Testing\obj\Debug\Challenge2.Testing.pdb
