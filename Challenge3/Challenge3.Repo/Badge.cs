@@ -19,11 +19,10 @@ namespace Challenge3.Repo
 
         }
 
-        public Badge(int badgeID, List<string> doorNames, string name)
+        public Badge(int badgeID, List<string> doorNames)
         {
             BadgeID = badgeID;
             DoorNames = doorNames;
-            Name = name;
         }
     }
 }
