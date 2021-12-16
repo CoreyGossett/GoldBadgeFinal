@@ -36,7 +36,7 @@ namespace Challenge3.UI
                         RemoveAllAccessFromBadge();
                         break;
                     case "4":
-                        ShowAllBadges();
+                        _badgeRepo.ShowAllBadges();
                         break;
                     case "5":
                         isRunning = false;
@@ -45,11 +45,6 @@ namespace Challenge3.UI
                         break;
                 }
             }
-        }
-
-        private void ShowAllBadges()
-        {
-            throw new NotImplementedException();
         }
 
         private void RemoveAllAccessFromBadge()
@@ -75,6 +70,7 @@ namespace Challenge3.UI
         public void AddBadge()
         {
             Badge badgeToBeAdded = new Badge();
+            List<string> doorList = new List<string>();
 
             Console.WriteLine("What is the badge number of the badge you are looking to add?");
             badgeToBeAdded.BadgeID = int.Parse(Console.ReadLine());
@@ -85,8 +81,7 @@ namespace Challenge3.UI
                 Console.WriteLine("What is a single door that your badge needs access too?");
                 string userInputDoor = Console.ReadLine();
 
-                _badgeRepo.AddDoorToList(badgeToBeAdded, userInputDoor);  
-
+                doorList.Add(userInputDoor);
                 Console.WriteLine("Is there any other doors it needs access to? y/n");
                 string userInputYesNo = Console.ReadLine();
 
@@ -101,7 +96,8 @@ namespace Challenge3.UI
                     addingDoors = false;
                 }
             }
-
+            badgeToBeAdded.DoorNames = doorList;
+            _badgeRepo.AddBadge(badgeToBeAdded);
 
             Console.WriteLine();
         }

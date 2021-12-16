@@ -10,31 +10,40 @@ namespace Challenge3.Repo
     {
         Dictionary<int, List<string>> _badgeDict = new Dictionary<int, List<string>>();
 
-        private int _count = 0;
-
         public bool AddBadge(Badge badge)
         {
             if (badge is null)
             {
                 return false;
             }
-            _count++;
-            badge.BadgeID = _count;
             _badgeDict.Add(badge.BadgeID, badge.DoorNames);
             return true;
         }
 
-        public bool AddDoorToList(Badge badge, string door)
+        public List<string> AddDoorToList(Badge badge, string door)
         {
+            List<string> newList = new List<string>();
+
             if (door is null)
             {
-                return false;
+                return null;
             }
             else
             {
-                badge.DoorNames.Add(door);
-                return true;
+                newList.Add(door);
             }
+            return newList;
+        }
+
+        public void ShowAllBadges()
+        {
+            foreach (KeyValuePair<int, List<string>> badge in _badgeDict)
+            {
+                Console.WriteLine("Badge #: {0}, Door Access: {1}",
+                    badge.Key, string.Join(", ", badge.Value));
+                Console.WriteLine("**********************************");
+            }
+            Console.ReadLine();
         }
     }
 }

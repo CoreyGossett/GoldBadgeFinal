@@ -1,0 +1,6 @@
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\bin\Debug\Challenge3.Repo.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\bin\Debug\Challenge3.Repo.pdb
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\obj\Debug\Challenge3.Repo.csproj.AssemblyReference.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\obj\Debug\Challenge3.Repo.csproj.CoreCompileInputs.cache
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\obj\Debug\Challenge3.Repo.dll
+D:\sd116\Goldbadge\GoldBadgeFinal\Challenge3\Challenge3.Repo\obj\Debug\Challenge3.Repo.pdb
