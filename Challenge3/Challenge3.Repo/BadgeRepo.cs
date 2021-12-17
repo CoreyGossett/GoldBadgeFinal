@@ -8,16 +8,53 @@ namespace Challenge3.Repo
 {
     public class BadgeRepo
     {
-        Dictionary<int, List<string>> _badgeDict = new Dictionary<int, List<string>>();
-
+        public Dictionary<int, List<string>> _badgeDict = new Dictionary<int, List<string>>();
+        public List<Badge> _badges = new List<Badge>();
+        
         public bool AddBadge(Badge badge)
         {
             if (badge is null)
             {
                 return false;
             }
+            _badges.Add(badge);
             _badgeDict.Add(badge.BadgeID, badge.DoorNames);
             return true;
+        }
+
+        public bool RemoveBadgeFromDictionary(int id)
+        {
+            if (id == 0)
+            {
+                return false;
+            }
+            else
+            {
+                _badgeDict.Remove(id);
+                return true;
+            }
+        }
+
+        public Badge GetBadgeById(int id)
+        {
+            foreach (Badge badge in _badges)
+            {
+                if (id == badge.BadgeID)
+                {
+                    return badge;
+                }
+            }
+            return null;
+        }
+
+        public void UpdateDoorList(int id, Badge newBadgeData)
+        {
+            Badge oldBadgeData = GetBadgeById(id);
+            if (oldBadgeData != null)
+            {
+                oldBadgeData.DoorNames = newBadgeData.DoorNames;
+                _badgeDict.Add(id, newBadgeData.DoorNames);
+            }
         }
 
         public List<string> AddDoorToList(Badge badge, string door)
@@ -34,6 +71,7 @@ namespace Challenge3.Repo
             }
             return newList;
         }
+
 
         public void ShowAllBadges()
         {

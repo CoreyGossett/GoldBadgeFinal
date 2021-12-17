@@ -10,6 +10,7 @@ namespace Challenge3.UI
     public class ProgramUI
     {
         BadgeRepo _badgeRepo = new BadgeRepo();
+        
 
         internal void Run()
         {
@@ -30,15 +31,12 @@ namespace Challenge3.UI
                         AddBadge();
                         break;
                     case "2":
-                        UpdateDoorAccess();
+                        DeleteAllAccessUpdateDoor();
                         break;
                     case "3":
-                        RemoveAllAccessFromBadge();
-                        break;
-                    case "4":
                         _badgeRepo.ShowAllBadges();
                         break;
-                    case "5":
+                    case "4":
                         isRunning = false;
                         break;
                     default:
@@ -47,30 +45,82 @@ namespace Challenge3.UI
             }
         }
 
-        private void RemoveAllAccessFromBadge()
+        public void DeleteAllAccessUpdateDoor()
         {
-            throw new NotImplementedException();
-        }
 
-        private void UpdateDoorAccess()
-        {
-            throw new NotImplementedException();
+            bool updatingAccess = true;
+
+            while (updatingAccess)
+            {
+                Console.Clear();
+                Console.WriteLine("What is the ID of the badge in which you are wishing to remove all access? Press 0 to see list of all Badges!");
+                int badgeNumber = int.Parse(Console.ReadLine());
+
+
+                if (badgeNumber == 0)
+                {
+                    _badgeRepo.ShowAllBadges();
+                    continue;
+                }
+                else
+                {
+                    
+                    Badge badge = _badgeRepo.GetBadgeById(badgeNumber);
+                    badge.DoorNames = null;
+                    Console.WriteLine($"Thank you! All doors have been removed from Badge#{badge.BadgeID}'s access. You will have to add more doors\n" +
+                        $"because a badge has to have at least one access point.");
+                    Console.ReadLine();
+
+                    List<string> newDoorList = new List<string>();
+
+                    bool addingDoors = true;
+                    while (addingDoors)
+                    {
+                        Console.Clear();
+                        Console.WriteLine($"What door would you like Badge#:{badge.BadgeID} to have access to?");
+                        string userInputDoor = Console.ReadLine();
+
+                        newDoorList.Add(userInputDoor);
+
+                        Console.WriteLine("Would you like to give access to anymore doors?\n" +
+                            "1. Yes\n" +
+                            "2. No");
+                        string yesOrNo = Console.ReadLine();
+                        if (yesOrNo == "1")
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            badge.DoorNames = newDoorList;
+                            break;
+                        }
+
+                    }
+
+                    _badgeRepo.RemoveBadgeFromDictionary(badgeNumber);
+                    _badgeRepo.AddBadge(badge);
+                    Console.WriteLine($"Thank you for updating Badge#:{badge.BadgeID}'s door access!");
+                    Console.ReadLine();
+                    updatingAccess = false;
+                }
+            }
         }
 
         public void Menu()
         {
             Console.WriteLine("Welcome To Komodo's Badge Manager!\n" +
                 "1. Add A Badge\n" +
-                "2. Add/Remove Door Access\n" +
-                "3. Remove All Door Access from Badge\n" +
-                "4. Show all badges\n" +
-                "5. Exit Application");
+                "2. Delete All and Update Door Access\n" +
+                "3. Show all badges\n" +
+                "4. Exit Application");
         }
 
         public void AddBadge()
         {
             Badge badgeToBeAdded = new Badge();
             List<string> doorList = new List<string>();
+            Console.Clear();
 
             Console.WriteLine("What is the badge number of the badge you are looking to add?");
             badgeToBeAdded.BadgeID = int.Parse(Console.ReadLine());
@@ -78,6 +128,7 @@ namespace Challenge3.UI
             bool addingDoors = true;
             while (addingDoors)
             {
+                Console.Clear();
                 Console.WriteLine("What is a single door that your badge needs access too?");
                 string userInputDoor = Console.ReadLine();
 
