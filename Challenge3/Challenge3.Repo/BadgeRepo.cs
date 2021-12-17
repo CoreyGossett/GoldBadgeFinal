@@ -46,16 +46,5 @@ namespace Challenge3.Repo
             }
             return null;
         }
-
-        public void ShowAllBadges()
-        {
-            foreach (KeyValuePair<int, List<string>> badge in _badgeDict)
-            {
-                Console.WriteLine("Badge #: {0}, Door Access: {1}",
-                    badge.Key, string.Join(", ", badge.Value));
-                Console.WriteLine("**********************************");
-            }
-            Console.ReadLine();
-        }
     }
 }

@@ -34,7 +34,7 @@ namespace Challenge3.UI
                         DeleteAllAccessUpdateDoor();
                         break;
                     case "3":
-                        _badgeRepo.ShowAllBadges();
+                        ShowAllBadges();
                         break;
                     case "4":
                         isRunning = false;
@@ -59,7 +59,7 @@ namespace Challenge3.UI
 
                 if (badgeNumber == 0)
                 {
-                    _badgeRepo.ShowAllBadges();
+                    ShowAllBadges();
                     continue;
                 }
                 else
@@ -82,11 +82,9 @@ namespace Challenge3.UI
 
                         newDoorList.Add(userInputDoor);
 
-                        Console.WriteLine("Would you like to give access to anymore doors?\n" +
-                            "1. Yes\n" +
-                            "2. No");
+                        Console.WriteLine("Is there any other doors it needs access to? y/n");
                         string yesOrNo = Console.ReadLine();
-                        if (yesOrNo == "1")
+                        if (yesOrNo == "y")
                         {
                             continue;
                         }
@@ -151,6 +149,17 @@ namespace Challenge3.UI
             _badgeRepo.AddBadge(badgeToBeAdded);
 
             Console.WriteLine();
+        }
+
+        public void ShowAllBadges()
+        {
+            foreach (KeyValuePair<int, List<string>> badge in _badgeRepo._badgeDict)
+            {
+                Console.WriteLine("Badge #: {0}, Door Access: {1}",
+                    badge.Key, string.Join(", ", badge.Value));
+                Console.WriteLine("**********************************");
+            }
+            Console.ReadLine();
         }
     }
 }
