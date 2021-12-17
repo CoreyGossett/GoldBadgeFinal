@@ -47,32 +47,6 @@ namespace Challenge3.Repo
             return null;
         }
 
-        public void UpdateDoorList(int id, Badge newBadgeData)
-        {
-            Badge oldBadgeData = GetBadgeById(id);
-            if (oldBadgeData != null)
-            {
-                oldBadgeData.DoorNames = newBadgeData.DoorNames;
-                _badgeDict.Add(id, newBadgeData.DoorNames);
-            }
-        }
-
-        public List<string> AddDoorToList(Badge badge, string door)
-        {
-            List<string> newList = new List<string>();
-
-            if (door is null)
-            {
-                return null;
-            }
-            else
-            {
-                newList.Add(door);
-            }
-            return newList;
-        }
-
-
         public void ShowAllBadges()
         {
             foreach (KeyValuePair<int, List<string>> badge in _badgeDict)
